@@ -1,3 +1,12 @@
+def printer(atendees)
+ batch_badge_creator(atendees).each do |badge|
+   puts badge 
+  end
+  assign_rooms(atendees).each do |room_assignments|
+    puts room_assignments
+  end
+end
+
 def badge_maker(name)
   name == "Arel"
   return "Hello, my name is #{name}."
@@ -21,11 +30,4 @@ def assign_rooms(atendees)
   return room_assignments
 end
 
-def printer(atendees)
- batch_badge_creator(atendees).each do |badge|
-   puts badge 
-  end
-  assign_rooms(atendees).each do |room_assignments|
-    puts room_assignments
-  end
-end
+
